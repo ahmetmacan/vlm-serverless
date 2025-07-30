@@ -3,7 +3,7 @@ import torch
 from PIL import Image
 import io
 from transformers import AutoModelForObjectDetection, AutoProcessor
-
+# minor change to trigger rebuild
 model_id = "omlab/VLM-R1-Qwen2.5VL-3B-OVD-0321"
 processor = AutoProcessor.from_pretrained(model_id)
 model = AutoModelForObjectDetection.from_pretrained(model_id).eval().to("cuda")
