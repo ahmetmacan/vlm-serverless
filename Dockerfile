@@ -24,6 +24,7 @@ RUN apt-get update --yes && \
 
 WORKDIR /opt/ckpt
 
+RUN apt-get update && apt-get install -y git
 COPY requirements.txt /opt/ckpt/requirements.txt
 RUN pip3 install -r /opt/ckpt/requirements.txt
 
